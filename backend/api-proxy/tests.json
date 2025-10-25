@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "name": "Create order via API",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "service_type": "subscribers",
+        "channel_url": "https://t.me/testchannel",
+        "quantity": 1000,
+        "customer_email": "test@example.com"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "order_id": "number",
+        "status": "string",
+        "total_price": "number",
+        "external_order_id": "any"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get all orders",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -115,6 +115,13 @@ const Admin = () => {
       </nav>
 
       <div className="container mx-auto px-4 py-8">
+        <div className="mb-6">
+          <Button variant="outline" onClick={() => window.location.href = '/integrations'}>
+            <Icon name="Plug" className="mr-2" size={18} />
+            API Интеграции
+          </Button>
+        </div>
+
         <Tabs defaultValue="services" className="w-full">
           <TabsList className="grid w-full max-w-md grid-cols-3">
             <TabsTrigger value="services">Услуги</TabsTrigger>
